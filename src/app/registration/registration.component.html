@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username" />
+      {{ username }}
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="text" class="form-control" [(ngModel)]="email" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="password" />{{
+        password
+      }}
+    </div>
+    <button (click)="register()" type="submit" class="btn btn-primary">
+      Register
+    </button>
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+  </div>
+</div>

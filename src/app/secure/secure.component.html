@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col">
+    <h1>Welcome</h1>
+    <div class="mb-3">
+      <label class="form-label">Add message and press enter</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="newMessage"
+        (keyup.enter)="addMessage()"
+      />
+      <div>
+        <p *ngFor="let message of messages">
+          <span class="chatname"> {{ message.name }} </span>
+          <span class="chatmessage"> {{ message.content }} </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<button (click)="logout()" class="btn btn-primary">Logout</button>
